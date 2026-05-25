@@ -83,6 +83,20 @@ This dashboard can be deployed using:
 
 ---
 
+## Data Cleaning Process
+
+Initial dataset contained 1,097,629 observations.
+
+Cleaning steps included:
+- Removing missing values
+- Removing duplicate records
+- Fixing invalid pressure anomalies
+- Capping unrealistic wind speed values
+- Standardizing weather observations
+
+Final analytical dataset:
+72,680 high-quality observations
+
 ## ⚠ Disclaimer
 
 This dashboard is intended for educational and analytical purposes only.

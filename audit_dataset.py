@@ -149,3 +149,5 @@ print(
 ## re audit setelah perbaikan di temperatur dll 
 
 
+print(df.shape)
+print(df.isna().sum())
