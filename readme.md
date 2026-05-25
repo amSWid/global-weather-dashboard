@@ -29,7 +29,7 @@ The dataset includes global weather and atmospheric indicators such as:
 - Geographic Coordinates
 - Climate Anomaly Labels
 
-Processed dataset contains over 1 million environmental records from multiple countries and continents.
+Processed dataset from multiple countries and cities to continents.
 
 ---
 
@@ -44,17 +44,6 @@ Processed dataset contains over 1 million environmental records from multiple co
 
 ## 📁 Project Structure
 
-```bash
-WPROJECT2026/
-│
-├── app.py
-├── requirements.txt
-├── data/
-├── components/
-├── sections/
-└── README.md
-```
-
 ---
 
 ## 🚀 Run Locally
@@ -67,25 +56,18 @@ pip install -r requirements.txt
 
 Run Streamlit:
 
-```bash
 streamlit run app.py
 ```
-
----
 
 ## 🌐 Deployment
 
 This dashboard can be deployed using:
 
 - Streamlit Community Cloud
-- Render
-- Hugging Face Spaces
 
 ---
 
 ## Data Cleaning Process
-
-Initial dataset contained 1,097,629 observations.
 
 Cleaning steps included:
 - Removing missing values

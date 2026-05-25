@@ -64,9 +64,11 @@ def show_overview(df):
     ## 📂 Data Cleaning Summary
     """)
 
-    raw_rows = 1_097_629
+    # =====================================
+    # DYNAMIC DATASET SUMMARY
+    # =====================================
+
     clean_rows = len(df)
-    removed_rows = raw_rows - clean_rows
 
     total_countries = (
         df["country"]
@@ -88,6 +90,33 @@ def show_overview(df):
             df["anomaly"] == -1
         ]
     )
+
+    # =====================================
+    # OPTIONAL RAW ROWS
+    # =====================================
+
+    if "raw_row_count" in df.columns:
+
+        raw_rows = int(
+            df["raw_row_count"]
+            .iloc[0]
+        )
+
+    else:
+
+        raw_rows = clean_rows
+
+    removed_rows = (
+        raw_rows - clean_rows
+    )
+
+    if removed_rows < 0:
+
+        removed_rows = 0
+
+    # =====================================
+    # KPI SECTION
+    # =====================================
 
     kpi1, kpi2, kpi3, kpi4 = st.columns(4)
 
@@ -291,10 +320,6 @@ def show_overview(df):
 
     with right:
 
-        # =====================================
-        # WEATHER SUMMARY
-        # =====================================
-
         st.markdown("""
         ## 🌦 Global Weather Summary
         """)
@@ -344,10 +369,6 @@ def show_overview(df):
             )
 
         st.markdown("<br>", unsafe_allow_html=True)
-
-        # =====================================
-        # GLOBAL GLOBE
-        # =====================================
 
         st.markdown("""
         ## 🌎 Global Climate Globe
